@@ -5,7 +5,12 @@ import time
 import traceback
 
 import aiofiles
-from pyrogram.errors import FloodWait, InputUserDeactivated, PeerIdInvalid, UserIsBlocked
+from pyrogram.errors import (
+    FloodWait,
+    InputUserDeactivated,
+    PeerIdInvalid,
+    UserIsBlocked,
+)
 from pyrogram.types import Message
 
 from Music.core.database import db

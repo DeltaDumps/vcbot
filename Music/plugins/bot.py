@@ -74,7 +74,9 @@ async def start(_, message: Message):
                 hellbot.app.mention,
                 hellbot.app.username,
             ),
-            reply_markup=InlineKeyboardMarkup(Buttons.start_pm_markup(hellbot.app.username)),
+            reply_markup=InlineKeyboardMarkup(
+                Buttons.start_pm_markup(hellbot.app.username)
+            ),
             disable_web_page_preview=True,
         )
     elif message.chat.type in [ChatType.GROUP, ChatType.SUPERGROUP]:

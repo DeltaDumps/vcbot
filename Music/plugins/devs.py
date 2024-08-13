@@ -99,7 +99,7 @@ async def term(_, message: Message):
             process = subprocess.Popen(
                 shell, stdout=subprocess.PIPE, stderr=subprocess.PIPE
             )
-        except Exception as err:
+        except Exception:
             exc_type, exc_obj, exc_tb = sys.exc_info()
             errors = traceback.format_exception(exc_type, exc_obj, exc_tb)
             await hell.edit("**Error:**\n`{}`".format("".join(errors)))

@@ -28,9 +28,7 @@ class Formatters:
             return False
 
     def mins_to_secs(self, time: str) -> int:
-        out_time = sum(
-            int(x) * 60**i for i, x in enumerate(reversed(time.split(":")))
-        )
+        out_time = sum(int(x) * 60**i for i, x in enumerate(reversed(time.split(":"))))
         return out_time
 
     def secs_to_mins(self, seconds: int) -> str:

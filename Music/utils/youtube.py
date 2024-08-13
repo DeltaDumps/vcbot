@@ -106,7 +106,7 @@ class YouTube:
         yt_url = await self.format_link(link, False)
         with yt_dlp.YoutubeDL(self.yt_playlist_opts) as ydl:
             results = ydl.extract_info(yt_url, False)
-            playlist = [video['id'] for video in results['entries']]
+            playlist = [video["id"] for video in results["entries"]]
         return playlist
 
     async def download(self, link: str, video_id: bool, video: bool = False) -> str:

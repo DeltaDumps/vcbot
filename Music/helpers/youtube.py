@@ -59,11 +59,18 @@ class Hell_YTS:
                 res["duration"] = video_data.get("lengthText", {}).get("simpleText", 0)
                 res["views"] = video_data.get("viewCountText", {}).get("simpleText", 0)
                 res["publish_time"] = (
-                    lambda d: d.strftime('%d{} of %B, %Y').format(
-                        'th' if 4 <= d.day <= 20 or 24 <= d.day <= 30 else ['st', 'nd', 'rd'][(d.day - 1) % 10 % 3]
+                    lambda d: d.strftime("%d{} of %B, %Y").format(
+                        "th"
+                        if 4 <= d.day <= 20 or 24 <= d.day <= 30
+                        else ["st", "nd", "rd"][(d.day - 1) % 10 % 3]
                     )
                 )(
-                    YouTube(("https://www.youtube.com/watch?v=" + video_data.get("videoId", None))).publish_date
+                    YouTube(
+                        (
+                            "https://www.youtube.com/watch?v="
+                            + video_data.get("videoId", None)
+                        )
+                    ).publish_date
                 )
 
                 res["url_suffix"] = (

@@ -47,11 +47,13 @@ class Leaderboard:
         index = 0
         top_10 = await self.get_top_10()
         text = f"**🧡 Top 10 Users of {bot_details['mention']}**\n\n"
-        hellbot = bot_details["client"]
+        bot_details["client"]
         for top in top_10:
             index += 1
             link = f"https://t.me/{bot_details['username']}?start=user_{top['id']}"
-            text += f"**⤷ {'0' if index <= 9 else ''}{index}:** [{top['user']}]({link})\n"
+            text += (
+                f"**⤷ {'0' if index <= 9 else ''}{index}:** [{top['user']}]({link})\n"
+            )
         text += "\n**🧡 Enjoy Streaming! Have Fun!**"
         return text
 

@@ -189,10 +189,7 @@ class TEXTS:
         "**» /rmsudo ; /delsudo**\n"
         "    __Remove sudo user of the bot.__\n\n"
     )
-    HELP_GC = (
-        "Get the help menu in your PM. "
-        "__Click the button below!__"
-    )
+    HELP_GC = "Get the help menu in your PM. " "__Click the button below!__"
     HELP_PM = (
         "**Help ⚙️**\n\n"
         "__» All commands are categorized based on their usability and target users.__\n"
@@ -200,10 +197,7 @@ class TEXTS:
         "__» Feel free to contact us if you need any help regarding the bot.__\n\n"
         "❤️🎶 {0}"
     )
-    START_GC = (
-        "Yeah, I'm alive! "
-        "__Wanna listen to some music?__"
-    )
+    START_GC = "Yeah, I'm alive! " "__Wanna listen to some music?__"
     START_PM = (
         "**Hello there** {0}**!**\n\n"
         "**I'm** {1} **, a music bot that can play music on Voice Chats.**\n"

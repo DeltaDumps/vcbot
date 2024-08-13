@@ -617,14 +617,18 @@ class Thumbnail:
             else:
                 title = title
 
-            humanize = (
-                lambda view_count: str(view_count)
+            humanize = lambda view_count: (
+                str(view_count)
                 if view_count < 1000
-                else "{:.1f}k".format(view_count / 1000)
-                if view_count < 1_000_000
-                else "{:.1f}M".format(view_count / 1_000_000)
-                if view_count < 1_000_000_000
-                else "{:.1f}B".format(view_count / 1_000_000_000)
+                else (
+                    "{:.1f}k".format(view_count / 1000)
+                    if view_count < 1_000_000
+                    else (
+                        "{:.1f}M".format(view_count / 1_000_000)
+                        if view_count < 1_000_000_000
+                        else "{:.1f}B".format(view_count / 1_000_000_000)
+                    )
+                )
             )
 
             view_count = humanize(view_count)
